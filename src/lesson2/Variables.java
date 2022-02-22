@@ -15,9 +15,6 @@ public class Variables {
         char myChar = 'a';
         boolean myBoolean = true;
 
-        byte myByte = 125; //-128 to 128
 
-
-        System.out.println(myInt);
     }
 }
