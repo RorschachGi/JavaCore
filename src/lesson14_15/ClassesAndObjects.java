@@ -1,4 +1,4 @@
-package lesson14;
+package lesson14_15;
 
 public class ClassesAndObjects {
     public static void main(String[] args){
@@ -6,14 +6,12 @@ public class ClassesAndObjects {
         Person personOne = new Person();
         personOne.age = 23;
         personOne.name = "Gregor";
-
-        System.out.println("Меня зовут " + personOne.name + " и мне " + personOne.age + " лет");
+        personOne.speak();
 
         Person personTwo = new Person();
         personTwo.age = 50;
         personTwo.name = "John";
-
-        System.out.println("Меня зовут " + personTwo.name + " и мне " + personTwo.age + " лет");
+        personTwo.sayHello();
     }
 }
 
@@ -24,4 +22,15 @@ class Person{
      */
     String name;
     int age;
+
+    void speak(){
+        System.out.println("Меня зовут " + name + " и мне " + age + " лет");
+    }
+
+    void sayHello(){
+        System.out.println("Hello!");
+    }
+
+
 }
+
