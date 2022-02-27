@@ -4,35 +4,44 @@ public class ClassesAndObjects {
     public static void main(String[] args){
 
         Person personOne = new Person();
-        personOne.setNameAndAge("Albert", 23);
+        personOne.setName("John");
+        personOne.setAge(10);
+        System.out.println("Выводим значение в main методе: " + personOne.getName());
+        System.out.println("Выводим значение в main методе: " + personOne.getAge());
         personOne.speak();
-
-
-        Person personTwo = new Person();
-        String s1 = "John";
-        int uAge = 50;
-        personTwo.setNameAndAge(s1, uAge);
-        personTwo.speak();
-
-
-        Person personThree = new Person();
-        personThree.setNameAndAge("Bob", 10);
-        personThree.speak();
 
     }
 }
 
 class Person{
-    /* У класса могут быть:
-       1. Данные (поля)
-       2. Действия, которые он может выполнять ( Методы )
-     */
-    String name;
-    int age;
 
-    void setNameAndAge(String username, int userAge){
-        name = username;
-        age = userAge;
+    //private поле доступно только в пределах этого класса
+    private String name;
+    private int age;
+
+    // геттеры и сеттеры
+    public void setName(String username){
+        if(username.isEmpty()){
+            System.out.println("Вы ввели пустое имя");
+        }else {
+            name = username;
+        }
+    }
+
+    public String getName(){
+        return name;
+    }
+
+    public void setAge(int userAge){
+        if(userAge < 0){
+            System.out.println("Число должно быть положительно");
+        }else {
+            age = userAge;
+        }
+    }
+
+    public int getAge(){
+        return age;
     }
 
     int calculateYearsToRetirement(){
@@ -41,7 +50,7 @@ class Person{
     }
 
     void speak(){
-        System.out.println("Меня зовут " + name + " и мне " + age + " лет");
+        System.out.println("Меня зовут " + name  + " и мне " + age + " лет");
     }
 
     void sayHello(){
