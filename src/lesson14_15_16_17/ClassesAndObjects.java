@@ -1,21 +1,24 @@
-package lesson14_15_16;
+package lesson14_15_16_17;
 
 public class ClassesAndObjects {
     public static void main(String[] args){
 
         Person personOne = new Person();
-        personOne.age = 23;
-        personOne.name = "Gregor";
+        personOne.setNameAndAge("Albert", 23);
         personOne.speak();
-        int yearOne = personOne.calculateYearsToRetirement();
+
 
         Person personTwo = new Person();
-        personTwo.age = 50;
-        personTwo.name = "John";
-        personOne.speak();
-        int yeatTwo = personTwo.calculateYearsToRetirement();
+        String s1 = "John";
+        int uAge = 50;
+        personTwo.setNameAndAge(s1, uAge);
+        personTwo.speak();
 
-        System.out.println("Первому человеку до пенсии " + yearOne + " , а второму " + yeatTwo);
+
+        Person personThree = new Person();
+        personThree.setNameAndAge("Bob", 10);
+        personThree.speak();
+
     }
 }
 
@@ -26,6 +29,11 @@ class Person{
      */
     String name;
     int age;
+
+    void setNameAndAge(String username, int userAge){
+        name = username;
+        age = userAge;
+    }
 
     int calculateYearsToRetirement(){
         int years = 65 - age;
