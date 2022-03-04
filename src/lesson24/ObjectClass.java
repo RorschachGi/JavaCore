@@ -30,7 +30,7 @@ class Dog{
         this.age = age;
     }
 
-    public void Voice(){
+    public void voice(){
         System.out.println("Лает");
     }
 
