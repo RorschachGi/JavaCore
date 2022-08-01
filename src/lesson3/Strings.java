@@ -8,6 +8,11 @@ public class Strings {
         String name = "Ivan";
         System.out.println(str + space + name);
 
+        String nameTwo = "John";
+
+
+        System.out.println(nameTwo);
+
         int x = 10;
 
         System.out.println(str + x);

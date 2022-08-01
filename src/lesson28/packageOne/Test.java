@@ -6,5 +6,6 @@ public class Test {
 
         // Получаем доступ т.к protected в пределах пакета
         System.out.println(personTwo.login);
+
     }
 }

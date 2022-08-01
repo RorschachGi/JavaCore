@@ -13,6 +13,9 @@ public class Test {
 
         Integer a = 34; // Java самостоятельно упакует примитив в обертку
 
+        int t = Integer.parseInt("214");
+        System.out.println(t);
+
 
 
 
