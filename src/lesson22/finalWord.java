@@ -2,9 +2,10 @@ package lesson22;
 
 public class finalWord {
     public static void main(String[] args){
-        // final используется для переменных, которые не могу бить изменены ( константы )
+        // final используется для переменных, которые не могут быть изменены (константы)
 
         final int X = 10;
+
         System.out.println(X);
     }
 }

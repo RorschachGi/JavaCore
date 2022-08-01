@@ -26,7 +26,7 @@ class Human{
         countPeople++;
     }
 
-    public void setAllFields(){
+    public void printAllFields(){
         System.out.println(name + " " + age + " " + countPeople);
     }
 
