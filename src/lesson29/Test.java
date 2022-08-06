@@ -7,6 +7,7 @@ public class Test {
         Animal animal = new Dog();
         //animal.bark() - не сработает
 
+
         // Позднее связывание - вызовется тот метод, что определен в потомке, если таковой имеется
         animal.eat();
 

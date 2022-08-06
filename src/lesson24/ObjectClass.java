@@ -8,7 +8,7 @@ public class ObjectClass {
 
         Dog dogOne = new Dog("Чарли", 6);
 
-        // Выведет хешкод объекта, использую метод toString() класса Object. В данном случае он используется
+        // Выведет хешкод объекта, используя метод toString() класса Object. В данном случае он используется
         // по умолчанию, как если бы System.out.println(dogOne.toString())
         System.out.println(dogOne);
 

@@ -20,7 +20,7 @@ public class test {
 
         System.out.println(string);
 
-        Scanner scanner = new Scanner(System.in);
+        /*Scanner scanner = new Scanner(System.in);
 
         int age = scanner.nextInt();
 
@@ -30,7 +30,7 @@ public class test {
                 break;
             default:
                 System.out.println("no 5 years");
-        }
+        }*/
 
         int[] arrayOfNumbers = {1, 2, 3, 4};
 
@@ -40,10 +40,14 @@ public class test {
             System.out.println(integer);
         }
 
+        StringBuilder sb = new StringBuilder("Overlord");
 
 
+        System.out.println(sb);
 
+        int x = 10;
 
+        String str1 = String.valueOf(x);
 
         //String stringTwo = scanner.nextLine();
         //System.out.println(stringTwo);

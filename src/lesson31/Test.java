@@ -2,6 +2,7 @@ package lesson31;
 
 public class Test {
     public static void main(String[] args){
+
         int x = 1;
 
         // Double, Float, Integer, Long, Short, Byte, Character, Boolean - классы обертки с методами
