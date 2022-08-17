@@ -1,6 +1,5 @@
-package lesson45;
+package lesson45_46;
 
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
@@ -9,8 +8,9 @@ public class WriteObject {
 
     public static void main(String[] args) {
 
-        Person person1 = new Person(1, "Bob");
-        Person person2 = new Person(2, "Mike");
+
+        // Массив объектов класса Person. Попробуем записать его. Есть два метода
+        Person[] personPeople = {new Person(1, "Bob"), new Person(2, "Mike"), new Person(3, "Tom") };
 
         // Сериализация нужна для записи объектов в файл, чтобы использовать их в будущем. С прекращением программы прекращают существование и объекты, поэтому их можно сохранить.
 
@@ -20,8 +20,15 @@ public class WriteObject {
             FileOutputStream fos = new FileOutputStream("people.bin");
             ObjectOutputStream oos = new ObjectOutputStream(fos);
 
-            oos.writeObject(person1);
-            oos.writeObject(person2);
+            // Метод 1: Первый метод заключается в том, чтобы сначала записать числом размер массива, затем циклом поочередно записать все объекты массива.
+            /*oos.writeInt(personPeople.length);
+
+            for(Person person : personPeople){
+                oos.writeObject(person);
+            }*/
+
+            // Метод 2: Второй способ заключается в том, чтобы записать не все объекты поочередно, а сразу весь массив, поскольку он тоже является объектом
+            oos.writeObject(personPeople);
 
             // Когда используем выходной поток данных - мы должны его закрывать
             oos.close();
